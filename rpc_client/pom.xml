@@ -4,12 +4,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>rpc</artifactId>
-        <groupId>org.bigwillc</groupId>
+        <groupId>org.bigwillc.rpc</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>rpc_client</artifactId>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.bigwillc.rpc</groupId>
+            <artifactId>rpc_core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bigwillc.rpc</groupId>
+            <artifactId>rpc_api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
