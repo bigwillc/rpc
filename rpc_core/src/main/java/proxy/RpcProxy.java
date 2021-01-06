@@ -20,6 +20,8 @@ package proxy;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
+ * proxy cache.
+ *
  * @author bigwillc
  */
 class RpcProxy {

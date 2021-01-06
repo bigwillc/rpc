@@ -7,6 +7,7 @@ public interface RpcClient {
 
     /**
      * create proxy
+     *
      * @param serviceClass service class
      * @param url server url
      * @param <T> T

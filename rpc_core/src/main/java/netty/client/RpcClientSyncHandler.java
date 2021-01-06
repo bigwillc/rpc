@@ -39,10 +39,21 @@ public class RpcClientSyncHandler extends SimpleChannelInboundHandler<CustomProt
         ctx.close();
     }
 
+    /**
+     * Init lock
+     *
+     * @param latch CountDownLatch
+     */
     public void setLatch(CountDownLatch latch) {
         this.latch = latch;
     }
 
+    /**
+     * Wait for response in blocking.
+     *
+     * @return RpcResponse
+     * @throws InterruptedException
+     */
     RpcResponse getResponse() throws InterruptedException {
         latch.await();
         return response;

@@ -12,10 +12,10 @@ import netty.common.CustomEncoder;
 public class RpcClientInitializer extends ChannelInitializer<SocketChannel> {
 
     @Override
-    protected void initChannel(SocketChannel socketChannel) throws Exception {
-        ChannelPipeline pipeline = socketChannel.pipeline();
+    protected void initChannel(SocketChannel ch) {
+        ChannelPipeline pipeline = ch.pipeline();
         pipeline.addLast("Message Encoder", new CustomEncoder());
         pipeline.addLast("Message Decoder", new CustomDecoder());
-        pipeline.addLast("ClientHandler", new RpcClientSyncHandler());
+        pipeline.addLast("clientHandler", new RpcClientSyncHandler());
     }
 }
