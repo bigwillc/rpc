@@ -1,4 +1,4 @@
-package org.bigwillc.rpc_server.service.impl;
+package org.bigwillc.rpcServer.service.impl;
 
 
 import exception.CustomException;

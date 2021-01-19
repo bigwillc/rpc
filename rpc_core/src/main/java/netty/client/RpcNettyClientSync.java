@@ -25,33 +25,31 @@ import java.util.concurrent.CountDownLatch;
 @Slf4j
 public class RpcNettyClientSync {
 
-    private enum EnumSingleton {
-
-        INSTANCE;
-        private RpcNettyClientSync instance;
-
-        EnumSingleton(){
-            instance = new RpcNettyClientSync();
-        }
-        public RpcNettyClientSync getSingleton(){
-            return instance;
-        }
-    }
-
-    public static RpcNettyClientSync getInstance(){
-        return EnumSingleton.INSTANCE.getSingleton();
-    }
-
-
-
-//    private RpcNettyClientSync() {
+//    private enum EnumSingleton {
+//
+//        INSTANCE;
+//        private RpcNettyClientSync instance;
+//
+//        EnumSingleton(){
+//            instance = new RpcNettyClientSync();
+//        }
+//        public RpcNettyClientSync getSingleton(){
+//            return instance;
+//        }
 //    }
 //
-//    private static RpcNettyClientSync instance = new RpcNettyClientSync();
-//
-//    public static RpcNettyClientSync getInstance() {
-//        return instance;
+//    public static RpcNettyClientSync getInstance(){
+//        return EnumSingleton.INSTANCE.getSingleton();
 //    }
+
+//    public RpcNettyClientSync() {
+//    }
+
+    private static RpcNettyClientSync instance = new RpcNettyClientSync();
+
+    public static RpcNettyClientSync getInstance() {
+        return instance;
+    }
 
     // using map to restore Channel for reuse, like a channel cache.
     private ConcurrentHashMap<String, Channel> channelPool = new ConcurrentHashMap<>();

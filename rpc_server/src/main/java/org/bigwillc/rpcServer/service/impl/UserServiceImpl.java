@@ -1,4 +1,4 @@
-package org.bigwillc.rpc_server.service.impl;
+package org.bigwillc.rpcServer.service.impl;
 
 import model.User;
 import service.UserService;
@@ -12,6 +12,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findById(Integer id) {
-        return new User(id, "RPC");
+        return new User(id, "-----------Hello RPC.---------");
     }
 }

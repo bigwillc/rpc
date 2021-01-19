@@ -40,7 +40,7 @@ public class RpcClientSyncHandler extends SimpleChannelInboundHandler<CustomProt
     }
 
     /**
-     * Init lock
+     * Init lock.
      *
      * @param latch CountDownLatch
      */

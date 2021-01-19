@@ -1,6 +1,6 @@
-package org.bigwillc.rpc_server;
+package org.bigwillc.rpcServer;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest

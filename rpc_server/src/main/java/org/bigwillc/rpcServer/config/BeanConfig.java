@@ -1,7 +1,7 @@
-package org.bigwillc.rpc_server.config;
+package org.bigwillc.rpcServer.config;
 
-import org.bigwillc.rpc_server.service.impl.OrderServiceImpl;
-import org.bigwillc.rpc_server.service.impl.UserServiceImpl;
+import org.bigwillc.rpcServer.service.impl.OrderServiceImpl;
+import org.bigwillc.rpcServer.service.impl.UserServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import service.OrderService;
@@ -15,12 +15,12 @@ import service.UserService;
 @Configuration
 public class BeanConfig {
 
-    @Bean("com.example.demo.service.UserService")
+    @Bean("service.UserService")
     public UserService userService() {
         return new UserServiceImpl();
     }
 
-    @Bean("com.example.demo.service.OrderService")
+    @Bean("service.OrderService")
     public OrderService orderService() {
         return new OrderServiceImpl();
     }

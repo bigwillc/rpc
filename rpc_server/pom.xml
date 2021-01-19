@@ -3,12 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.1</version>
+        <groupId>org.bigwillc.rpc</groupId>
+        <artifactId>rpc</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>org.bigwillc</groupId>
+
+    <groupId>org.bigwillc.rpc</groupId>
     <artifactId>rpc_server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>rpc_server</name>
@@ -19,6 +20,18 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.bigwillc.rpc</groupId>
+            <artifactId>rpc_api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bigwillc.rpc</groupId>
+            <artifactId>rpc_core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -34,16 +47,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.bigwillc</groupId>
-            <artifactId>rpc_api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.bigwillc</groupId>
-            <artifactId>rpc_core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
     </dependencies>
 
     <build>
@@ -51,14 +54,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
             </plugin>
         </plugins>
     </build>
